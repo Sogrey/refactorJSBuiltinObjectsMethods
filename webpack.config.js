@@ -2,6 +2,7 @@ const path = require('path')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
+  mode: 'development',//development OR production
   entry: "./src/array/index.ts",
   // entry: "./src/home.js",
   output: {
@@ -17,7 +18,8 @@ module.exports = {
       test: /\.tsx?$/,
       use: {
         loader: "ts-loader"
-      }
+      },
+      exclude: /node_modules/ // 除node_modules文件夹下之外的以.ts结尾的文件
     }]
 
   },

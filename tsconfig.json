@@ -1,11 +1,8 @@
-/* {
-  "compilerOptions": {
-    "module": "commonjs",
-    "noImplicitAny": true,
-    "removeComments": true,
-    "preserveConstEnums": true,
-    "sourceMap": true,
-    "target": "es5"
-  },
-  "files": []
-} */
+{
+  "compilerOptions": { // 编译的配置项
+      "outDir": "./dist", // 借助ts-loader打包后的js文件放到dist目录下
+      "module": "es6", // 指的是在ts文件里，我们使用的是es模块的方式进行引入的
+      "target": "es5", // 打包转译成es5语法
+      "allowJs": true // 在ts文件里允许引入一些其他的js文件
+  }
+}
